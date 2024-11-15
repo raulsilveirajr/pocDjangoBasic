@@ -41,6 +41,8 @@ pip install crispy-bootstrap5
 ## Create a requirements.txt file
 pip freeze > requirements.txt
 
+## Install the requirements.txt file
+pip install -r requirements.txt
 
 ## VSCode Extensions
 Python
@@ -48,29 +50,3 @@ Python Debugger
 Django
 Black Formatter
 SQLite Viewer
-MySQL v7.6.2 by Weijan Chen database-client.com
-
-
-## Description
-This is a repository for the Twyt project, a Python-based social media platform.
-
-## Installation
-To install Twyt, follow these steps:
-
-1. Clone the repository:
-  ```
-  git clone https://github.com/your-username/twyt.git
-  ```
-
-2. Change into the project directory:
-  ```
-  cd twyt
-  ```
-
-3. Install the required dependencies:
-  ```
-  pip install -r requirements.txt
-  ```
-
-## Usage
-To start using Twyt, run the following command:
