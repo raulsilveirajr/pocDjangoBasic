@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block page_title %}{% endblock %}
+{% block content %}
+  <div class="d-flex p-2 justify-content-between">
+    <h2>Todos list</h2>
+    <div class="d-flex align-items-center">
+      <a href={% url 'todo_create' %} class="btn btn-primary btn-sm align-middle" target="_blank" rel="noopener noreferrer">New task</a>
+    </div>
+  </div>
+
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Created at</th>
+          <th scope="col">Deadline</th>
+          <th scope="col">Completed at</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for todo in todos %}
+        <tr>
+          <th scope="row"><a href={% url 'todo_update' pk=todo.id %} >{{ todo.id }}</a></th>
+          <td>{{ todo.title }}</td>
+          <td>{{ todo.created_at }}</td>
+          <td>{{ todo.deadline }}</td>
+          <td>{{ todo.finished_at|default:"-" }}</td>
+          <td>
+            <div class="nav justify-content-end">
+              {% if not todo.finished_at %}
+              <a href={% url 'todo_complete' pk=todo.id %} class="btn btn-primary btn-sm ms-1">Task done</a>
+              <a href={% url 'todo_update' pk=todo.id %} class="btn btn-secondary btn-sm ms-1">Edit</a>
+              {% endif %}
+              <a href={% url 'todo_delete' pk=todo.id %} class="btn btn-danger btn-sm ms-1">Delete</a>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {% if not todos %}
+    <div class="alert-warning">No items found.</div>
+    {% endif %}
+  </div>
+{% endblock %}

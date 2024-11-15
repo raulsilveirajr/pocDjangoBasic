@@ -1,0 +1,76 @@
+# pocDjangoBasic
+A basic POC in Django ( based in a TreinaWeb video - https://www.youtube.com/watch?v=MsUL3Pgofl4 )
+
+## Virtual Enviroment Inicialization
+python3 -m venv .venv
+# To activate
+source ./.venv/bin/activate
+# To deactivate
+deactivate
+
+## Django Installation
+pip install django
+
+## Create a Django Project
+django-admin startproject setup .
+
+## Run the server
+python3 manage.py runserver
+
+## Create a Django App
+python3 manage.py startapp todos
+
+## Create a Django Model (run Django default migrations)
+python3 manage.py migrate
+
+## Create a migration based in a Django Model
+python3 manage.py makemigrations
+
+## Install python-decouple (to use .env)
+pip install python-decouple
+
+## Install dj-database-url (to use DATABASE_URL)
+pip install dj-database-url
+
+## Install black (code formatter)
+pip install black
+
+## Install crispy-bootstrap5 (to use crispy forms with bootstrap 5)
+pip install crispy-bootstrap5
+
+## Create a requirements.txt file
+pip freeze > requirements.txt
+
+
+## VSCode Extensions
+Python
+Python Debugger
+Django
+Black Formatter
+SQLite Viewer
+MySQL v7.6.2 by Weijan Chen database-client.com
+
+
+## Description
+This is a repository for the Twyt project, a Python-based social media platform.
+
+## Installation
+To install Twyt, follow these steps:
+
+1. Clone the repository:
+  ```
+  git clone https://github.com/your-username/twyt.git
+  ```
+
+2. Change into the project directory:
+  ```
+  cd twyt
+  ```
+
+3. Install the required dependencies:
+  ```
+  pip install -r requirements.txt
+  ```
+
+## Usage
+To start using Twyt, run the following command:
