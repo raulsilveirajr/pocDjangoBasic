@@ -44,6 +44,13 @@ pip freeze > requirements.txt
 ## Install the requirements.txt file
 pip install -r requirements.txt
 
+## Install pytest and coverage
+pip install pytest coverage
+
+Run tests: pytest
+Run tests with coverage: coverage run -m pytest
+Generate coverage report: coverage report
+
 ## VSCode Extensions
 Python
 Python Debugger

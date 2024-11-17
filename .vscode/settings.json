@@ -9,5 +9,18 @@
   },
   "emmet.includeLanguages": {
     "django-html": "html",
-  }, 
+  },
+  "python.testing.pytestArgs": [
+    "todos"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./todos",
+    "-p",
+    "*test*.py"
+  ],
+  "python:pythonPath": ".venv/bin/python",
 }

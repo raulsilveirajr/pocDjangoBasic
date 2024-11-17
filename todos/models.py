@@ -10,8 +10,5 @@ class Todo(models.Model):
     finished_at = models.DateField(null=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.title
-    
     class Meta:
         ordering = ["-deadline"]
